@@ -1,0 +1,120 @@
+body{
+font-family:Arial;
+text-align:center;
+width:100%;
+margin:0;
+}
+h1{
+color:aqua;
+text-decoration:wavy;
+
+}
+h1:hover{
+color:#ddd;
+cursor:pointer;
+transform: scale(1.4);
+
+}
+/* Small devices (600px and up) */
+@media (min-width:600px){
+
+.product{
+width:50%;
+display:flex;
+margin:20px auto;
+}
+
+}
+
+
+/* Medium devices (768px and up) */
+@media (min-width:768px){
+
+.product{
+width:45%;
+display:inline-block;
+margin:10px;
+}
+
+}
+
+
+/* Large devices (992px and up) */
+@media (min-width:992px){
+
+.product{
+width:22%;
+display:inline-block;
+margin:10px;
+}
+
+}
+
+
+/* Extra large devices (1200px and up) */
+@media (min-width:1200px){
+
+.product{
+width:14%;
+display:inline-block;
+margin:10px;
+}
+
+}
+
+
+.products{
+
+width:100%;
+margin:auto;
+height: 100%;
+background-color: #ddd;
+color:aqua;
+padding:0%;
+
+
+
+}
+.products:hover{
+background-color: blueviolet;
+
+}
+
+
+.product {
+
+display:inline-flex;
+width:70vh;
+height: 70vh;
+margin:10px;
+padding:80px;
+border:1px solid #ddd;
+
+}
+.product h3{
+color:aqua;
+text-decoration:wavy;
+}
+.product h3:hover{
+color:orange;
+cursor:pointer;
+transform: scale(1.4);
+
+}
+ 
+
+.product img{
+
+width:90%;
+
+
+}
+
+
+.product :hover{
+
+box-shadow:0px 10px 10px gray;
+cursor:pointer;
+background-color: #ddd;
+
+}
