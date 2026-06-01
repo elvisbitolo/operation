@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Hello World",
+    "content": "This is a first post."
+  },
+  {
+    "id": 2,
+    "title": "Hello React",
+    "content": "This is a post about React."
+  },
+  {
+    "id": 3,
+    "title": "Advanced React",
+    "content": "This is a post about advanced React concepts."
+  }
+]
