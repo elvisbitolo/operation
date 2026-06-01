@@ -1,0 +1,142 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-card {
+  max-width: 520px;
+}
+
+.auth-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.auth-error {
+  background: rgba(255, 23, 68, 0.1);
+  border: 1px solid var(--error);
+  color: var(--text-main);
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.avatar-choice {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.avatar-choice:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.1);
+}
+
+.avatar-choice.active {
+  border-color: var(--primary);
+  background: var(--primary-glow);
+  box-shadow: 0 0 10px var(--primary-glow);
+  transform: scale(1.1);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+.auth-divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  line-height: 0.1em;
+  margin: 25px 0;
+}
+
+.auth-divider span {
+  background: var(--bg-color);
+  padding: 0 15px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.google-icon {
+  margin-right: 8px;
+}
+
+.auth-switch {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.auth-switch a {
+  color: var(--primary);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.auth-switch a:hover {
+  text-shadow: 0 0 5px var(--primary-glow);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .avatar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

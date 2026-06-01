@@ -1,0 +1,238 @@
+.results-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results-header {
+  text-align: center;
+}
+
+.results-main-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.results-subtitle {
+  color: var(--text-muted);
+}
+
+/* ELO Panel */
+.elo-status-panel {
+  width: 100%;
+  padding: 20px !important;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.status-item .lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-item .val {
+  font-family: var(--font-header);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.winner-glow {
+  color: var(--warn);
+  text-shadow: 0 0 10px rgba(255, 234, 0, 0.4);
+}
+
+.elo-change.plus { color: var(--success); }
+.elo-change.minus { color: var(--error); }
+
+/* Podium Layout */
+.podium-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 250px;
+  gap: 15px;
+  width: 100%;
+  margin: 20px 0;
+  padding-bottom: 10px;
+}
+
+.podium-spot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  transition: var(--transition);
+}
+
+.podium-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 4px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.podium-score {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.avatar-holder {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.podium-bar {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-header);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-muted);
+}
+
+/* Height based on rankings */
+.podium-spot.first {
+  order: 2;
+}
+.podium-spot.first .podium-bar {
+  height: 140px;
+  background: rgba(108, 99, 255, 0.25);
+  border-color: rgba(108, 99, 255, 0.4);
+  color: var(--warn);
+}
+.podium-spot.first .podium-name {
+  font-size: 1.1rem;
+  color: var(--warn);
+}
+
+.podium-spot.second {
+  order: 1;
+}
+.podium-spot.second .podium-bar {
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border);
+  color: #c0c0c0;
+}
+
+.podium-spot.third {
+  order: 3;
+}
+.podium-spot.third .podium-bar {
+  height: 70px;
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--border);
+  color: #cd7f32;
+}
+
+/* Final Standing list */
+.final-scoreboard-panel {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.results-item.is-me {
+  border-color: var(--secondary-glow);
+  background: rgba(0, 212, 255, 0.03);
+}
+
+.results-rank {
+  font-family: var(--font-header);
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 40px;
+}
+
+.results-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.results-score {
+  font-family: var(--font-header);
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* Actions */
+.results-actions {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.results-actions button {
+  flex: 1;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+/* Crown Floating */
+.crown-animation {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+  .status-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .results-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

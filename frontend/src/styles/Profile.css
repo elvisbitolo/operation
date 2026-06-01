@@ -1,0 +1,214 @@
+.profile-container {
+  width: 100%;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar-display {
+  margin-bottom: 20px;
+}
+
+.avatar-big {
+  font-size: 4rem;
+  width: 110px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.gladiator-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.gladiator-rank {
+  font-family: var(--font-header);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 25px;
+}
+
+.stats-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-family: var(--font-header);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.edit-profile-btn {
+  width: 100%;
+  padding: 12px;
+}
+
+/* Right Side details */
+.panel-section-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.profile-error {
+  background: rgba(255, 23, 68, 0.15);
+  border: 1px solid var(--error);
+  color: var(--text-main);
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.profile-success {
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid var(--success);
+  color: var(--text-main);
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.profile-avatar-choice {
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.profile-avatar-choice:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.1);
+}
+
+.profile-avatar-choice.active {
+  border-color: var(--primary);
+  background: var(--primary-glow);
+  box-shadow: 0 0 10px var(--primary-glow);
+  transform: scale(1.1);
+}
+
+.profile-form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.profile-form-actions button {
+  flex: 1;
+  padding: 12px;
+}
+
+/* Combat records list */
+.records-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 1rem;
+}
+
+.record-lbl {
+  color: var(--text-muted);
+}
+
+.record-val {
+  font-weight: 600;
+}
+
+.code-font {
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.highlight-color {
+  color: var(--secondary);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-avatar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
